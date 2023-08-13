@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
-<html lang="en" >
-
-<head>
-    <meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>logo</title>
     <style>
@@ -12,7 +10,7 @@
         padding: 0;
         box-sizing: border-box;
       }
-      
+
       :root {
         --color-main: #62fb00;
         --color-main-1: #62fb0080;
@@ -22,14 +20,12 @@
         --size: 50px;
         --size-box: 200px;
         --shadow-base: 0 0 8px rgba(12, 69, 227, 0.2),
-          0 0 10px rgba(225, 0, 0, 0.1),
-          0 0 10px rgba(225, 0, 0, 0.3),
-          0 0 10px rgba(225, 0, 0, 0.6),
-          0 0 40px rgba(225, 0, 02, 0.8),
+          0 0 10px rgba(225, 0, 0, 0.1), 0 0 10px rgba(225, 0, 0, 0.3),
+          0 0 10px rgba(225, 0, 0, 0.6), 0 0 40px rgba(225, 0, 02, 0.8),
           0 0 40px rgba(225, 0, 02, 1);
-        --color-light: #A4F6FE;
+        --color-light: #a4f6fe;
       }
-      
+
       section {
         position: relative;
         width: 100%;
@@ -40,16 +36,17 @@
         justify-content: center;
         align-items: center;
       }
-      
-      
+
       .bg {
         --radius: 75px;
         position: absolute;
         width: var(--size-box);
-        background: linear-gradient(180deg,
-            rgba(0, 98, 251, 0) 0%,
-            rgba(0, 98, 251, .8) 90%,
-            rgb(0, 98, 251) 100%);
+        background: linear-gradient(
+          180deg,
+          rgba(0, 98, 251, 0) 0%,
+          rgba(0, 98, 251, 0.8) 90%,
+          rgb(0, 98, 251) 100%
+        );
         bottom: 32px;
         border-bottom-left-radius: var(--radius);
         border-bottom-right-radius: var(--radius);
@@ -63,33 +60,31 @@
           0 30px 20px -5px rgba(12, 69, 227, 0.3),
           0 30px 20px -5px rgba(12, 69, 227, 0.4),
           0 30px 20px -5px rgba(12, 69, 227, 0.5);
-        opacity: .4;
+        opacity: 0.4;
       }
-      
+
       @keyframes animate {
-      
         0% {
           height: 90px;
         }
-      
+
         25% {
           height: 250px;
         }
-      
+
         50% {
           height: 180px;
         }
-      
+
         75% {
           height: 200px;
         }
-      
+
         100% {
           height: 90px;
         }
       }
-      
-      
+
       .container {
         position: relative;
         width: var(--size-box);
@@ -97,17 +92,19 @@
         left: 0px;
         bottom: 0px;
       }
-      
+
       .base {
         position: absolute;
         width: var(--size-box);
         height: var(--size-box);
         transform: rotateX(114deg);
         border-radius: 50%;
-        background: radial-gradient(circle 360px,
-            rgba(0, 98, 251, .3) 0%,
-            rgba(0, 98, 251, .3) 50%,
-            rgba(0, 98, 251, 1) 100%);
+        background: radial-gradient(
+          circle 360px,
+          rgba(0, 98, 251, 0.3) 0%,
+          rgba(0, 98, 251, 0.3) 50%,
+          rgba(0, 98, 251, 1) 100%
+        );
         border: 3px solid var(--color-light);
         box-shadow: var(--shadow-base);
         display: block;
@@ -115,9 +112,9 @@
         bottom: -30px;
         filter: blur(2px);
       }
-      
+
       .base::after {
-        content: '';
+        content: "";
         position: absolute;
         width: calc(var(--size-box) - 150px);
         height: calc(var(--size-box) - 160px);
@@ -130,9 +127,9 @@
         left: 68px;
         bottom: 43px;
       }
-      
+
       .base::before {
-        content: '';
+        content: "";
         position: absolute;
         width: calc(var(--size-box) - 60px);
         height: calc(var(--size-box) - 69px);
@@ -144,13 +141,12 @@
         left: 24px;
         bottom: 16px;
       }
-      
+
       .water {
         position: absolute;
-        opacity: .7;
+        opacity: 0.7;
       }
-      
-      
+
       .water .bubbles {
         position: absolute;
         background-color: var(--color-main);
@@ -161,116 +157,168 @@
         border-radius: 50%;
         animation: moves 3s linear infinite;
       }
-    
+
       .water .bubbles:nth-child(1) {
         animation: moves 4s linear infinite;
         background-color: #8b41fa;
       }
-      
+
       .water .bubbles:nth-child(3) {
         animation: moves 2s linear infinite;
         background-color: #fff;
       }
-      
+
       .water .bubbles:nth-child(4) {
         background-color: #b586fb;
         animation: moves 4s linear infinite;
       }
-      
+
       @keyframes moves {
         0% {
           transform: translate(0, 0);
           opacity: 0;
         }
-      
+
         50% {
           transform: translate(0, -100px);
           opacity: 1;
         }
-      
+
         100% {
           transform: translate(0, -200px);
           opacity: 0;
         }
       }
-      
+
       .logo {
         //background-image: url("https://semicon.github.io/img/taksila8088.png");
         position: absolute;
         left: 57px;
-        align:center;
+        align: center;
         animation: animate-logo 5s linear infinite;
         animation-delay: 3ms;
         width: 80px;
         height: 88px;
       }
-      
+
       @keyframes animate-logo {
         0% {
           bottom: 120px;
           opacity: 1;
         }
-      
+
         50% {
           bottom: 170px;
-          opacity: .8;
+          opacity: 0.8;
         }
-      
+
         100% {
           opacity: 1;
           bottom: 120px;
         }
       }
-        h1 {
-  color: red;
-  text-shadow: 1px 1px 2px white, 0 0 30px red, 0 0 5px darkred;
-}
+
+      @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #151719;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .waviy {
+        position: relative;
+        -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+        font-size: 60px;
+      }
+      .waviy span {
+        font-family: "Alfa Slab One", cursive;
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        text-transform: uppercase;
+        animation: waviy 1s infinite;
+        animation-delay: calc(0.1s * var(--i));
+      }
+      @keyframes waviy {
+        0%,
+        40%,
+        100% {
+          transform: translateY(0);
+        }
+        20% {
+          transform: translateY(-20px);
+        }
+      }
     </style>
-  
-</head>
-<body>
-  <section>
-    <div class="container">
-    <div class="row">
-      <div class="logo"><img src="https://sv1.picz.in.th/images/2023/04/28/ygwR22.png" alt="" width="100" height="100"></div>
-      <div class="bg"></div>
-      <div class="water"></div>
-      <div class="base"></div>
-    </div>
-        </div>
-    <div class="container">
+  </head>
+  <body>
+    <section>
+      <div class="container">
         <div class="row">
-        <div><h1>ครูอั๋น ใจดี ID LINE : kruaun_jaidee</h1></div>
-        <div><h1>ครูอั๋น ใจดี Facebook : ครูอั๋น ใจดี</h1></div>
-    </div>
+          <div class="logo">
+            <img
+              src="https://sv1.picz.in.th/images/2023/04/28/ygwR22.png"
+              alt=""
+              width="100"
+              height="100"
+            />
+          </div>
+          <div class="bg"></div>
+          <div class="water"></div>
+          <div class="base"></div>
         </div>
-  </section>
-</body>
+      </div>
+      nbsp; nbsp;
+      <div class="waviy">
+        <span style="--i: 1">K</span>
+        <span style="--i: 2">R</span>
+        <span style="--i: 3">U</span>
+        <span style="--i: 4">A</span>
+        <span style="--i: 5">U</span>
+        <span style="--i: 6">N</span>
+        <span style="--i: 7"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8">J</span>
+        <span style="--i: 9">A</span>
+        <span style="--i: 10">I</span>
+        <span style="--i: 11">D</span>
+        <span style="--i: 12">E</span>
+        <span style="--i: 13">E</span>
+      </div>
+    </section>
+  </body>
 </html>
-  
+
 <script>
-    let animationContainer = document.querySelector('.container');
-    let water = document.querySelector('.water');
-    let myHtml = '';
-    
-    for (let i = 0; i < 5; i++) {
-      myHtml += '<div class="bubbles"></div>';
-    }
-    
-    water.innerHTML = myHtml;
-    
-    function createWaterRandom() {
-      water.style.bottom = Math.random() * 200 + 'px';
-      water.style.left = Math.random() * 95 + '%';
-    
-      let waterClone = water.cloneNode(true);
-      animationContainer.appendChild(waterClone);
-    
-      setTimeout(() => {
-        waterClone.remove();
-      }, 8000);
-    }
-    
-    setInterval(createWaterRandom, 800);
-    //# sourceURL=pen.js
+  let animationContainer = document.querySelector(".container");
+  let water = document.querySelector(".water");
+  let myHtml = "";
+
+  for (let i = 0; i < 5; i++) {
+    myHtml += '<div class="bubbles"></div>';
+  }
+
+  water.innerHTML = myHtml;
+
+  function createWaterRandom() {
+    water.style.bottom = Math.random() * 200 + "px";
+    water.style.left = Math.random() * 95 + "%";
+
+    let waterClone = water.cloneNode(true);
+    animationContainer.appendChild(waterClone);
+
+    setTimeout(() => {
+      waterClone.remove();
+    }, 8000);
+  }
+
+  setInterval(createWaterRandom, 800);
+  //# sourceURL=pen.js
 </script>
